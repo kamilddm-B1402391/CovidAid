@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="css/ctis.css">
+</head>
+<body style="background-color:#f8f8f8;">
+	<h2 class ="cenhead"> CTIS </h2>
+	<div class="vmenu">
+		<a href="recordTest.html">Record Patient</a>
+			<ul><a href="updatepatient.html" class="active">Record Test</a></ul>
+			<ul><a href="updatetest.html">Update Test</a></ul>
+		<a href="tester.html">View history</a>
+        <a href="tester.html">Admin</a>
+            <ul><a href="registercentre.html" >Register New Testing Centre</a></ul>
+            <ul><a href="recordtester.html">Register Testing Officer</a></ul>
+            <ul><a href="managekit.html">Register New Test Kits</a></ul>  
+		<a href="index.html">Logout</a>
+	</div>
+	<div class="column" >
+	<div class="container" >
+	<h2>Update Test Details</h2>
+	<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+		<div class="input" ><label class="validation-error hide" id="typeValidationError"></label>Type <input id="type" type="text" placeholder="enter type"></input></div>
+		<div class="input">Symptom <input id="symptom" type="text" placeholder="enter symptom"></input></div>
+		<div class="input">Status: <input id="status" type="text" placeholder="enter status"></input></div>
+		<div class="input">Date: <br><input id="date" type="date"  ></input></div>
+		<div class="input">ID: <br><input id="id" type="number" placeholder="number" ></input></div>
+		
+		<div class="form-action-buttons"><input type="submit" value="submit">
+		</div>
+	</form>
+		
+	</div>
+	<td>
+	<table class="list" id="testList">
+		<thead>
+		<tr>
+			
+			<th>Type</th>
+			<th>symptom</th>
+			<th>status</th>
+			<th>date</th>
+			<th>ID</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	</td>
+	<script src ="javascript.js" >
+
+	</script>
+	
+	</div>
+	
+		
+		
+	
+</body>
+</html>

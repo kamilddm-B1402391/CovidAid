@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="css/ctis.css">
+	
+	<script>
+		function onFormSubmit(){
+			alert("Test result has been updated");
+			}
+	</script>
+</head>
+<body style="background-color:#f8f8f8;">
+	<h2 class ="cenhead"> CTIS </h2>
+	<div class="vmenu">
+		<a href="recordTest.html">Record Patient</a>
+			<ul><a href="updatepatient.html" >Record Test</a></ul>
+			<ul><a href="updatetest.html" class="active">Update Test</a></ul>
+		<a href="tester.html">View history</a>
+    	<a href="tester.html">Admin</a>
+	        <ul><a href="registercentre.html">Register New Testing Centre</a></ul>
+	        <ul><a href="recordtester.html">Register Testing Officer</a></ul>
+	        <ul><a href="managekit.html">Register New Test Kits</a></ul>
+		<a href="index.html">Logout</a>
+	</div>
+	<div class="column" >
+	<div class="container" >
+	<h2>Test Results</h2>
+	<form onsubmit="onFormSubmit();" autocomplete="off">
+		<div class="input" ><label class="validation-error hide" id="typeValidationError"></label>ID <input id="id" type="text" placeholder="enter id"></input></div>
+		<div class="input">Result <input id="result" type="text" placeholder="enter result"></input></div>
+		<div class="input"> Result Date: <br><input id="date" type="date" placeholder="dd/mm/yy" ></input></div>
+		<div class="input">status: <br><input id="status" type="text" placeholder="status" ></input></div>
+		
+		<div class="form-action-buttons"><input type="submit" value="submit">
+		</div>
+	</form>
+
+	</div>
+	
+		
+		
+	
+</body>
+</html>

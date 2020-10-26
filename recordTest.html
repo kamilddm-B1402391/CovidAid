@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="ctis.css">
+</head>
+<body style="background-color:#f8f8f8;">
+	<h2 class ="cenhead"> CTIS </h2>
+	
+	<div class="vmenu">
+		<a href="recordTest.html" class="active">Record Patient</a>
+			<ul><a href="updatepatient.html">Record Test</a></ul>
+			<ul><a href="updatetest.html">Update Test</a></ul>
+		<a href="tester.html">View history</a>
+        <a href="tester.html">Admin</a>
+            <ul><a href="registercentre.html" >Register New Testing Centre</a></ul>
+            <ul><a href="recordtester.html">Register Testing Officer</a></ul>
+            <ul><a href="managekit.html">Register New Test Kits</a></ul>    
+		<a href="index.html">Logout</a>
+	</div>
+	
+	<div class="column" >
+	<div class="container" >
+		<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+		<h2>Covid tracking system</h2>
+		<p>please fill in this if patient is not registered</p>
+		<h2>patient detail</h2>
+                    <div>
+                        <label>Username</label><label class="validation-error hide" id="usernameValidationError"></label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div>
+                        <label>password</label>
+                        <input type="text" name="password" id="password">
+                    </div>
+					<div>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label>Type</label>
+                        <input type="text" name="type" id="type">
+                    </div>
+                    <div>
+                        <label>Symptom</label>
+                        <input type="text" name="symptom" id="symptom">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="patientList">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>password</th>
+							 <th>name</th>
+                            <th>type</th>
+                            <th>symptom</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+	</div>
+	
+		
+		
+	
+</body>
+</html>
