@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Manager login</title>
-	<link rel="stylesheet" href="ctis.css">
+	<title>CovidAid | Admin Login/Registration</title>
+	<link rel="stylesheet" type="text/css" href="css/ctis.css">
 
 </head>
-<body>
-<h1 style="text-align: center">COVID TRACKING SYSTEM</h1>
-<h2 style="text-align: center"> Login for centre manager</h2>
-	
-<div class="container" >
-	<form action="insert.php" method="POST">
-    <label for="uname"><b>Username</b></label><br>
-    <input type="text" placeholder="Enter Username" name="username" required>
-	<br>
-	
-	<label for="psw"><b>Password</b></label><br>
-    <input type="password" placeholder="Enter Password" name="password" required>
-	
+<body class="login-bg" style="background-image: url('images/loginbg.jpg');">
+<div class="login-page" >
+	<div class="form-login">
+		<form class="register-form">
+			<input type="text" placeholder="Username">
+			<input type="password" placeholder="Password">
+			<input type="text" placeholder="Full Name">
+			<button type="submit">Register</button>
+			<p class="msg-login">Already Registered?<a href="#">Login Here</a></p>
+		</form>
 
-  
-  </div>
-  <div class="container" style="background-color:#f1f1f1">
-    <input type="reset" value="reset" class="resetbtn">
-    <button type="button" class="submitbtn">Login</button>
-	</form>
+		<form class="login-form" action="recordTest.html" method="POST">
+			<input type="text" placeholder="Username">
+			<input type="password" placeholder="Password">
+			<button type="submit">Login</button>
+			<p class="msg-login">Not Registered?<a href="#">Register Here</a></p>
+		</form>
+	</div>
   </div>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-
-
-
-
+<script>
+	$('.msg-login a').click(function(){
+		$('form').animate({height:"toggle",opacity:"toggle"}, "slow")
+	});
+</script>
 
 </body>
 </html>
