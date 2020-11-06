@@ -103,7 +103,7 @@ function insertNewCentre(data) {
     cell3.innerHTML = generateID();
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+                       <a onClick="onDeleteCentre(this)">Delete</a>`;
 }
 
 function validateCentre() {
@@ -139,7 +139,7 @@ function generateID(){
     Math.floor(Math.random()*1000);
 }
 
-function onDelete(td) {
+function onDeleteCentre(td) {
     if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
         document.getElementById("centreList").deleteRow(row.rowIndex);
