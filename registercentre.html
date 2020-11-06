@@ -3,14 +3,14 @@
 <head>
   <title>CovidAid | Register New Testing Centre</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/ctis.css">
 </head>
 <body style="background-color:#f8f8f8;">
-  <h2 class ="cenhead"> CTIS | Admin</h2>
+  <h2 class ="cenhead">CovidAid | Admin</h2>
   <div class="vmenu">
-    <a href="recordTest.html">Record Patient</a>
-      <ul><a href="updatepatient.html">Record Test</a></ul>
+    <a>Patient</a>
+      <ul><a href="recordTest.html">Record Test</a></ul>
       <ul><a href="updatetest.html">Update Test</a></ul>
       <ul><a href="generatereport.html">Generate Test Report</a></ul>
       <a href="tester.html">View history</a>
@@ -20,40 +20,47 @@
       <ul><a href="managekit.html">Register New Test Kits</a></ul>
     <a href="index.html">Logout</a>
   </div>
+
   <div class="column" >
   <div class="container" >
-  <h2>Add Testing Centre</h2>
-  <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-    <div class="input" ><label class="validation-error hide" id="typeValidationError"></label>Centre Name<input id="centre-name" type="text" placeholder="Enter Centre Name"></input></div>
-    <div class="input">Officer-in-Charge<input id="oic" type="text" placeholder="Enter Officer Name"></input></div>
-    <div class="form-action-buttons"><input type="submit" value="submit">
-    </div>
-  </form>
-    
-  </div>
-  <td>
-  <table class="list" id="centrelist">
-    <thead>
-    <tr>
-      
-      <th>Centre Name</th>
-      <th>Officer-in-Charge</th>
-      <th>ID</th>
-      <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-  </td>
-  <script src ="javascript.js" >
+    <form onsubmit="event.preventDefault();onFormSubmitCentre();" autocomplete="off">
+    <h2>CovidAid | Register New Centre</h2>
+    <h2>Centre Details</h2>
+                    <div>
+                        <label>Centre Name</label><label class="validation-error hide" id="centreValidate"></label>
+                        <input type="text" name="centreName" id="centreName">
+                    </div>
+                    <div>
+                        <label>Officer-in-Charge</label>
+                        <input type="text" name="oic" id="oic">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="centreList">
+                    <thead>
+                        <tr>
+                            <th>Centre Name</th>
+                            <th>Officer-in-Charge</th>
+                            <th>ID</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-  </script>
-  
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="js/script.js"></script>
   </div>
-  
-    
-    
-  
+
+
+
+
 </body>
 </html>

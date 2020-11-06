@@ -83,3 +83,66 @@ function validate() {
     }
     return isValid;
 }
+
+function readcentreData() {
+    var formData = {};
+    formData["centreName"] = document.getElementById("centreName").value;
+    formData["oic"] = document.getElementById("oic").value;
+    return formData;
+
+}
+
+function insertNewCentre(data) {
+    var table = document.getElementById("centreList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.centreName;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.oic;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = generateID();
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+}
+
+function validateCentre() {
+    isValid = true;
+    if (document.getElementById("centreName").value == "") {
+        isValid = false;
+        document.getElementById("centreValidate").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("centreValidate").classList.contains("hide"))
+            document.getElementById("centreValidate").classList.add("hide");
+    }
+    return isValid;
+}
+
+function updatecentreRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.centreName;
+    selectedRow.cells[1].innerHTML = formData.oic;
+}
+
+function onFormSubmitCentre() {
+    if (validateCentre()) {
+        var formData = readcentreData();
+        if (selectedRow == null)
+            insertNewCentre(formData);
+        else
+            updatecentreRecord(formData);
+        resetForm();
+    }
+}
+
+function generateID(){
+    Math.floor(Math.random()*1000);
+}
+
+function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("centreList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
